@@ -3110,15 +3110,15 @@ async function loadAIComparison() {
             // Write to database based on the number of surveys completed
             
             if (numSurveyCompleted == 1) {
-                // let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/AIcomparison1' ;
-                // await writeRealtimeDatabase(db1, path, TOPIC_AI_COMPARISON_DICT);
+                let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/AIcomparison1' ;
+                await writeRealtimeDatabase(db1, path, TOPIC_AI_COMPARISON_DICT);
                 $("#ai-comparison-container").attr("hidden", true);
                 $("#ai-open-ended-feedback-container").attr("hidden", false);
                 loadAIopenEndedFeedback(numSurveyCompleted);
                 
             } else if (numSurveyCompleted == 2) {
-                // let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/AIcomparison2' ;
-                // await writeRealtimeDatabase(db1, path, TOPIC_AI_COMPARISON_DICT);
+                let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/AIcomparison2' ;
+                await writeRealtimeDatabase(db1, path, TOPIC_AI_COMPARISON_DICT);
                 $("#ai-comparison-container").attr("hidden", true);
                 $("#ai-open-ended-feedback-container").attr("hidden", false);
                 await loadAIopenEndedFeedback(numSurveyCompleted);
@@ -3169,11 +3169,11 @@ async function loadAIopenEndedFeedback(numSurveyCompleted) {
             // await writeRealtimeDatabase(db1, path, feedbackData);
             
             if (numSurveyCompleted == 1) {
-                // let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/OpenEnded1' ;
-                // await writeRealtimeDatabase(db1, path, feedbackData);
+                let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/OpenEnded1' ;
+                await writeRealtimeDatabase(db1, path, feedbackData);
             } else if (numSurveyCompleted == 2) {
-                // let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/OpenEnded2' ;
-                // await writeRealtimeDatabase(db1, path, feedbackData);
+                let path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/OpenEnded2' ;
+                await writeRealtimeDatabase(db1, path, feedbackData);
             }
 
             if (numSurveyCompleted == 2) {
@@ -3289,13 +3289,13 @@ async function loadFullSurvey(){
         
         let path;
         if (numSurveyCompleted == 1) {
-            // path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/full1';
+            path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/full1';
         } else if (numSurveyCompleted == 2) {
-            // path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/full2';
+            path = studyId + '/participantData/' + firebaseUserId1 + '/selfAssessment/full2';
 
         }
 
-        // await writeRealtimeDatabase(db1, path, TOPIC_FULL_DICT);
+        await writeRealtimeDatabase(db1, path, TOPIC_FULL_DICT);
         await loadAIComparison();
 
         $("#ai-comparison-container").attr("hidden", false);
@@ -3379,9 +3379,9 @@ async function loadCompletePage(){
             */
 
             let feedbacktext = $('#user-feedback-text').val();
-            //let path = studyId + '/participantData/' + firebaseUserId1 + 'paricipantInfo/' + 'feedback';
-            // let currentPath = studyId + '/participantData/' + firebaseUserId1 + '/participantInfo/' + 'feedback'
-            // writeRealtimeDatabase(db1, currentPath, feedbacktext);
+            let path = studyId + '/participantData/' + firebaseUserId1 + 'paricipantInfo/' + 'feedback';
+            let currentPath = studyId + '/participantData/' + firebaseUserId1 + '/participantInfo/' + 'feedback'
+            writeRealtimeDatabase(db1, currentPath, feedbacktext);
     
             replaceClass('#user-feedback-button', "btn-secondary", "btn-primary");
         };
