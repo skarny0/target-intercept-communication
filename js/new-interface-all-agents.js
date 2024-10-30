@@ -645,11 +645,13 @@ async function initExperimentSettings() {
 
     const maxCompletionTimeMinutes = 60;
 
-    // const blockOrderCondition = 'blockOrderCondition'; // a string we use to represent the condition name
-    const numConditions = 8; // number of conditions
+    const blockOrderCondition = 'blockOrderCondition'; // a string we use to represent the condition name
+    const numConditions = 4; // number of conditions
     const numDraws = 1; // number of draws
-    // const assignedCondition = await blockRandomization(db1, studyId, blockOrderCondition, numConditions, maxCompletionTimeMinutes, numDraws);
     let assignedCondition;
+    assignedCondition = await blockRandomization(db1, studyId, blockOrderCondition, numConditions, maxCompletionTimeMinutes, numDraws);
+    currentCondition = assignedCondition[0] + 1;    
+    console.log("Assigned Condition", assignedCondition);
 
     // if (DEBUG) assignedCondition = [10]; // 3 == ignorant and divide
 
@@ -659,21 +661,22 @@ async function initExperimentSettings() {
     //     currentCondition = assignedCondition[0]+1;
     // }
 
-    let teamingBlockCondition = 'teamingCondition'; // a string we use to represent the condition name
+    const teamingBlockCondition = 'teamingCondition'; // a string we use to represent the condition name
     const numTeamingConditions = 6; // number of conditions
     let assignedTeamingCondition;
 
     if (DEBUG){
-        // assignedTeamingCondition = await blockRandomization(db1, studyId, teamingBlockCondition, numTeamingConditions, maxCompletionTimeMinutes, numDraws);
-        assignedTeamingCondition = [3]; 
+        assignedTeamingCondition = await blockRandomization(db1, studyId, teamingBlockCondition, numTeamingConditions, maxCompletionTimeMinutes, numDraws);
+        // assignedTeamingCondition = [3]; 
     } 
-    // else {
-    //     assignedTeamingCondition = await blockRandomization(db1, studyId, teamingBlockCondition, numTeamingConditions, maxCompletionTimeMinutes, numDraws);
-    // }
+    else {
+        assignedTeamingCondition = await blockRandomization(db1, studyId, teamingBlockCondition, numTeamingConditions, maxCompletionTimeMinutes, numDraws);
+    }
 
     // if (DEBUG) currentTeamingCondition = COLLAB; // 3 == ignorant and divide 
 
-    currentTeamingCondition = assignedTeamingCondition[0];
+    currentTeamingCondition = assignedTeamingCondition[0] + 1;
+    console.log("Current Teaming Condition", currentTeamingCondition);
 
     collabPlayer1 = teamingSettings[currentTeamingCondition].AICollab1;
     collabPlayer2 = teamingSettings[currentTeamingCondition].AICollab2;
@@ -690,11 +693,6 @@ async function initExperimentSettings() {
     noAssignment = false;
 
     curSeeds = randomValues;
-
-    if (DEBUG){
-        currentCondition = 4;
-    }
-
     // return [blockOrderCondition, teamingBlockCondition];
 }
 
