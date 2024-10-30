@@ -3182,8 +3182,8 @@ async function loadAIopenEndedFeedback(numSurveyCompleted) {
                 $("#task-header").attr("hidden", true);
                 $("#exp-complete-header").attr("hidden", false);
                 $("#complete-page-content-container").attr("hidden", false);
-                // finalizeBlockRandomization(db1, studyId, blockOrderCondition);
-                // finalizeBlockRandomization(db1, studyId, teamingBlockCondition);
+                finalizeBlockRandomization(db1, studyId, blockOrderCondition);
+                finalizeBlockRandomization(db1, studyId, teamingBlockCondition);
                 await loadCompletePage();
             } else {
                 // update AI order settings
