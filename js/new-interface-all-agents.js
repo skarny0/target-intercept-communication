@@ -693,7 +693,7 @@ async function initExperimentSettings() {
     noAssignment = false;
 
     curSeeds = randomValues;
-    // return [blockOrderCondition, teamingBlockCondition];
+    return [blockOrderCondition, teamingBlockCondition];
 }
 
 
@@ -713,7 +713,8 @@ if (noAssignment){
         // teamingBlockCondition
     } else {
         // havin the names for each condition is needed for block randomization
-        conditionsArray = await initExperimentSettings();
+        await initExperimentSettings();
+
         blockOrderCondition = conditionsArray[0];
         teamingBlockCondition = conditionsArray[1];
 
