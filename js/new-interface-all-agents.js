@@ -1158,7 +1158,7 @@ function updateObjects(settings) {
                 score             += obj.value;
                 player.score      += obj.value;
 
-                if (obj.ID == player.targetObjID) player.moving = false; // stop player after catching intended target
+                // if (obj.ID == player.targetObjID) player.moving = false; // stop player after catching intended target
 
                 // *************************** Data Writing *********************************//
                 let gameState = extractGameState(objects);
