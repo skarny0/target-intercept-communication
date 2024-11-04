@@ -87,9 +87,9 @@ var COLLAB = getCollabTypeParams(); // 0=ignorant; 1=omit; 2=divide; 3=delay
 let studyId = 'placeHolder';
 
 if (DEBUG){
-   studyId    = "pilot_Oct31_debug";
+   studyId    = "pilot_Nov4_debug";
 } else {
-    studyId   = "pilot_Oct31";
+    studyId   = "pilot_Nov4";
 }
 
 // WRITE PROLIFIC PARTICIPANT DATA TO DB1
@@ -357,40 +357,40 @@ let difficultySettings_communication = {
 let difficultySettings = {
     // 5 targets first
     1: {0: {1: {AICollab: collabPlayer1,     // Pair A
-                maxTargets: 20},  
+                maxTargets: 15},  
             2: {AICollab: collabPlayer2,
-                maxTargets: 20}},
+                maxTargets: 15}},
         1: {1: {AICollab: collabPlayer1,     // Pair A
-                maxTargets: 20},
+                maxTargets: 15},
             2: {AICollab: collabPlayer2,
-                maxTargets: 20}}},
+                maxTargets: 15}}},
 
     2: {0: {1: {AICollab: collabPlayer2,    // Pair B
-                maxTargets: 20},  
+                maxTargets: 15},  
             2: {AICollab: collabPlayer1,
-                maxTargets: 20}},
+                maxTargets: 15}},
         1: {1: {AICollab: collabPlayer1,    // Pair A
-                maxTargets: 20},
+                maxTargets: 15},
             2: {AICollab: collabPlayer2,
-                maxTargets: 20}}},
+                maxTargets: 15}}},
     
     3: {0: {1: {AICollab:collabPlayer1,    // Pair A
-                maxTargets: 20},
+                maxTargets: 15},
             2: {AICollab: collabPlayer2,
-                maxTargets: 20}},
+                maxTargets: 15}},
         1: {1: {AICollab: collabPlayer2,   // Pair B
-                maxTargets: 20},
+                maxTargets: 15},
             2: {AICollab: collabPlayer1,
-                maxTargets: 20}}},
+                maxTargets: 15}}},
 
     4: {0: {1: {AICollab: collabPlayer2,    // Pair B
-                maxTargets: 20}, 
+                maxTargets: 15}, 
             2: {AICollab: collabPlayer1,
-                maxTargets: 20}},
+                maxTargets: 15}},
         1: {1: {AICollab: collabPlayer2,    // Pair B
-                maxTargets: 20},
+                maxTargets: 15},
             2: {AICollab: collabPlayer1,
-                maxTargets: 20}}},
+                maxTargets: 15}}},
 };
 
 // function assigns the condition's agent types to the difficulty settings, can reuse this for communcation
