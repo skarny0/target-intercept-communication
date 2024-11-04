@@ -357,40 +357,40 @@ let difficultySettings_communication = {
 let difficultySettings = {
     // 5 targets first
     1: {0: {1: {AICollab: collabPlayer1,     // Pair A
-                maxTargets: 15},  
+                maxTargets: 20},  
             2: {AICollab: collabPlayer2,
-                maxTargets: 15}},
+                maxTargets: 20}},
         1: {1: {AICollab: collabPlayer1,     // Pair A
-                maxTargets: 15},
+                maxTargets: 20},
             2: {AICollab: collabPlayer2,
-                maxTargets: 15}}},
+                maxTargets: 20}}},
 
     2: {0: {1: {AICollab: collabPlayer2,    // Pair B
-                maxTargets: 15},  
+                maxTargets: 20},  
             2: {AICollab: collabPlayer1,
-                maxTargets: 15}},
+                maxTargets: 20}},
         1: {1: {AICollab: collabPlayer1,    // Pair A
-                maxTargets: 15},
+                maxTargets: 20},
             2: {AICollab: collabPlayer2,
-                maxTargets: 15}}},
+                maxTargets: 20}}},
     
     3: {0: {1: {AICollab:collabPlayer1,    // Pair A
-                maxTargets: 15},
+                maxTargets: 20},
             2: {AICollab: collabPlayer2,
-                maxTargets: 15}},
+                maxTargets: 20}},
         1: {1: {AICollab: collabPlayer2,   // Pair B
-                maxTargets: 15},
+                maxTargets: 20},
             2: {AICollab: collabPlayer1,
-                maxTargets: 15}}},
+                maxTargets: 20}}},
 
     4: {0: {1: {AICollab: collabPlayer2,    // Pair B
-                maxTargets: 15}, 
+                maxTargets: 20}, 
             2: {AICollab: collabPlayer1,
-                maxTargets: 15}},
+                maxTargets: 20}},
         1: {1: {AICollab: collabPlayer2,    // Pair B
-                maxTargets: 15},
+                maxTargets: 20},
             2: {AICollab: collabPlayer1,
-                maxTargets: 15}}},
+                maxTargets: 20}}},
 };
 
 // function assigns the condition's agent types to the difficulty settings, can reuse this for communcation
